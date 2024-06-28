@@ -1,0 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #1c1e53;
+    transition: color 0.3s ease;
+}
+
+a:hover{
+    color: #5e3bee !important;
+}
+
+h5{
+    font-size: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+nav{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    padding: 0 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo,
+footer .logo{
+    display: flex;
+    align-items: center;
+}
+
+nav .logo a,
+footer .logo a{
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav .logo img,
+footer .logo img{
+    width: 40px;
+    height: 40px;
+}
+
+nav ul,
+footer .top ul{
+    display: flex;
+    gap: 40px;
+}
+
+nav ul {
+    display: flex;
+    gap: 70px;
+    font-size: 20px;
+    margin: 0px 38px 0px 0px;
+}
+nav button{
+    color: #1c1e53;
+    background-color: transparent;
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: 1px solid #1c1e53;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+nav button:hover{
+    background-color: #000000;
+    border-color: #5e3bee;
+    color: #fff;
+}
+
+nav button#menuButton{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 7px;
+}
+
+.main {
+    background-color: #455d4b;
+    padding: 90px 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.main .left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: #fff;
+}
+
+.main .left h3 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 46px;
+    color: #fff;
+}
+
+.main .left h3 span {
+    color: #1c1e53;
+}
+
+.main .left p {
+    color: #fff;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.main .left button {
+    margin-top: 40px;
+    color: #1c1e53;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.main .right img {
+    width: 500px;
+}
+
+.skills {
+    padding: 110px 85px 0;
+}
+
+.skills h3,
+.about .right h3 {
+    font-size: 40px;
+    margin-top: 20px;
+    color: #1c1e53;
+}
+.portfolio .header h3 {
+    font-size: 40px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.skill-items {
+    display: flex;
+    text-align: center;
+    gap: 40px;
+    margin: 40px 0px 10px 100px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #ffffff96;
+    border-radius: 10px;
+    padding: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #455d4b;
+    width: 30%;
+}
+
+.item h4 {
+    color: #fff;
+    border-bottom: 2px solid #d7dde4;
+    padding-bottom: 5px;
+}
+
+.item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.item ul li {
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    line-height: 22px;
+    font-size: 18px;
+}
+
+.skills .skill-items .item:hover {
+    border-color: #5e3bee;
+}
+
+.about {
+    padding: 110px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    color: #1c1e53;
+}
+
+.about .right p {
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    width: calc(30% - 20px);
+    max-width: 300px;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card .slideshow-container {
+    
+    height: 180px;
+    overflow: hidden;
+}
+
+.card .slideshow-container img {
+    width: 100%;
+    height: 180px;
+}
+
+.card .container {
+    padding: 20px;
+}
+
+.card h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1c1e53;
+}
+
+.card p {
+    color: #455d4b;
+}
+
+.portfolio {
+    background-color: #455d4b;
+    padding: 110px 85px;
+}
+
+.portfolio .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+footer{
+    padding: 85px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top,
+footer .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .top .social-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+
+footer .separator{
+    width: 100%;
+    height: 1px;
+    background-color: #282938;
+    margin: 30px 0 20px;
+}
+
+footer .bottom p{
+    font-size: 12px;
+}
+
+footer .bottom .links a{
+    font-size: 12px;
+    margin-left: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+    .main .left h5 {
+        font-size: 18px;
+    }
+
+    .main .left h3 {
+        font-size: 36px;
+    }
+
+    .main .left p {
+        font-size: 18px;
+    }
+
+    .main .right img {
+        width: 380px;
+    }
+
+    .skills .skill-items {
+        gap: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .skills .skill-items .item {
+        width: 45%;
+    }
+
+    .about .left img {
+        width: 370px;
+    }
+
+    .skills h3,
+    .about .right h3,
+    .portfolio .header h3 {
+        font-size: 32px;
+    }
+
+    .about .right p {
+        font-size: 15px;
+    }
+
+    footer .top ul {
+        gap: 20px;
+    }
+    
+    .card {
+        width: 30%; /* Full width cards on extra small screens */
+        max-width: none;
+        margin: 10px auto; /* Center the card */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav button {
+        display: none;
+    }
+
+    nav ul {
+        gap: 30px;
+    }
+
+   
+    .main {
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .portfolio .portfo-items {
+        gap: 22px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portfolio .portfo-items .item {
+        width: 48%;
+    }
+
+    footer .top ul {
+        display: none;
+    }
+
+    .skills {
+        padding: 85px 42px 0;
+    }
+
+    .skills .skill-items {
+        gap: 20px;
+    }
+
+    .skills .skill-items .item {
+        width: 48%;
+    }
+
+    .card {
+        width: 45%; /* Full width cards on extra small screens */
+        max-width: none;
+        margin: 10px auto; /* Center the card */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+        padding: 0 42px;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav.open .logo {
+        display: none;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+
+    .main {
+        padding: 42px;
+    }
+
+    .skills {
+        padding: 60px 42px ;
+    }
+
+    .skills .skill-items {
+        gap: 10px;
+    }
+
+    .skills .skill-items .item {
+        width: 90%;
+    }
+
+    .about {
+        padding: 85px 42px;
+    }
+
+    .portfolio {
+        padding: 60px 42px;
+    }
+
+    .portfolio .portfo-items {
+        gap: 18px;
+    }
+
+    footer {
+        padding: 85px 42px;
+    }
+
+    footer .bottom {
+        flex-direction: column-reverse;
+        gap: 14px;
+    }
+
+    nav button#menuButton {
+        display: flex;
+    }
+
+    .card {
+        width: 70%; /* Full width cards on extra small screens */
+        max-width: none;
+        margin: 10px auto; /* Center the card */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    nav ul li a {
+        font-size: 13px;
+    }
+
+    nav .logo a {
+        font-size: 18px;
+    }
+
+    .main .left h3 {
+        font-size: 32px;
+    }
+
+    .main .left p {
+        font-size: 16px;
+    }
+
+    .main .left button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .skills h3,
+    .about .right h3,
+    .portfolio .header h3 {
+        font-size: 28px;
+    }
+
+    .item h4 {
+        font-size: 18px;
+    }
+
+    .item ul li {
+        font-size: 16px;
+    }
+
+    footer .top .social-links {
+        font-size: 18px;
+    }
+
+    footer .bottom p,
+    footer .bottom .links a {
+        font-size: 10px;
+    }
+
+    .card {
+        width: 80%; /* Full width cards on extra small screens */
+        max-width: none;
+        margin: 0 auto; /* Center the card */
+    }
+}
