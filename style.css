@@ -443,6 +443,7 @@ footer .bottom .links a{
 
     .skills .skill-items {
         gap: 10px;
+        margin-left: 20px;
     }
 
     .skills .skill-items .item {
@@ -529,6 +530,6 @@ footer .bottom .links a{
     .card {
         width: 80%; /* Full width cards on extra small screens */
         max-width: none;
-        margin: 0 auto; /* Center the card */
+        margin: 10px auto; /* Center the card */
     }
 }
