@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-97SSTRDTBQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-97SSTRDTBQ');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -10,205 +19,202 @@
 </head>
 
 <body>
-
-    <nav>
-        <div class="logo">
-            
-            <a href="#">Hassan Shahzad</a>
-        </div>
-        <ul>
-            <li><a href="#main">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-        </ul>
-        <button id="menuButton" onclick="openMenu()">
-            <i class='bx bx-menu'></i>
-        </button>
-    </nav>
-
-    <div class="main" id="main">
-        <div class="left">
-            <h5>Hey, I am Hassan</h5>
-            <h3>A passionate 
-              <span>software developer</span> skilled in creating functional and sleek web applications.</h3>
-
-              <button onclick="downloadCV()">Download CV</button>
-        </div>
-        <div class="right">
-            <img src="assets/header-img.png">
-        </div>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
     </div>
-
-    <div class="skills" id="skills">
-        <h3>My Expertise</h3>
-        <div class="skill-items">
-            <div class="item">
-                <h4>Frontend</h4>
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap</li>
-                    <li>React.js</li>
-                    <li>Material UI</li>
-                </ul>
-            </div>
-            <div class="item">
-                <h4>Backend</h4>
-                <ul>
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                    <li>Flask</li>
-                </ul>
-            </div>
-            <div class="item">
-                <h4>Database</h4>
-                <ul>
-                    <li>MongoDB</li>
-                    <li>MySQL</li>
-                </ul>
-            </div>
-            
-            
-        </div>
-    </div>
-
-    <div class="about" id="about">
-        
-        <div class="right">
-            <h3>About Me</h3>
-            <p>
-              I'm Hassan Shahzad, a software developer with a Bachelor's in Computer Science from Comsats University, Islamabad. I specialize in both frontend (HTML, CSS, React.js) and backend development (Node.js, Flask). During my internship at NITB, I honed my frontend skills. My final year project, SmartDial, secured 3rd place in our university competition, showcasing my innovative solutions.
-            </p>
-            <p>
-              I thrive in collaborative environments and enjoy sports like cricket and football. Fluent in Urdu, English, and French, I am always eager to learn new technologies and tackle challenging projects. Explore my portfolio to see my work and get in touch!
-            </p>
-        </div>
-    </div>
-
- 
-
-    <div class="portfolio" id="portfolio">
-      <div class="header">
-          <h3>My Projects</h3>
-      </div>
-      <div class="projects">
-          <!-- Project Card 1 -->
-          <div class="card">
-              <div class="slideshow-container">
-                  <div class="mySlides1">
-                      <img src="assets/s3.PNG" alt="Project 1 Image">
-                  </div>
-                  <div class="mySlides1">
-                      <img src="assets/s4.PNG" alt="Project 1 Image">
-                  </div>
-                  <div class="mySlides1">
-                      <img src="assets/sc-2.PNG" alt="Project 1 Image">
-                  </div>
-              </div>
-              <div class="container">
-                  <h4><b>Smart Dial</b></h4>
-                  <p>Final Year Project</p>
-              </div>
-          </div>
-  
-          <!-- Project Card 2 -->
-          <div class="card">
-              <div class="slideshow-container">
-                  <div class="mySlides2">
-                      <img src="assets/s7.PNG" alt="Project 2 Image">
-                  </div>
-                  <div class="mySlides2">
-                      <img src="assets/s8.PNG" alt="Project 2 Image">
-                  </div>
-                  <div class="mySlides2">
-                      <img src="assets/s6.PNG" alt="Project 2 Image">
-                  </div>
-              </div>
-              <div class="container">
-                  <h4><b>E-commerce Store</b></h4>
-                  <p>Personal Project</p>
-              </div>
-          </div>
-
-          <div class="card">
-            <div class="slideshow-container">
-                <div class="mySlides4">
-                    <img src="assets/n1.PNG" alt="Project 4 Image">
-                </div>
-                <div class="mySlides4">
-                    <img src="assets/n2.PNG" alt="Project 4 Image">
-                </div>
-                <div class="mySlides4">
-                    <img src="assets/n3.PNG" alt="Project 4 Image">
-                </div>
-            </div>
-            <div class="container">
-                <h4><b>Socialize</b></h4>
-                <p>Personal Project</p>
-            </div>
-        </div>
-  
-          <!-- Project Card 3 -->
-          <div class="card">
-              <div class="slideshow-container">
-                  <div class="mySlides3">
-                      <img src="assets/s5.PNG" alt="Project 3 Image">
-                  </div>
-                  <div class="mySlides3">
-                      <img src="assets/s5.PNG" alt="Project 3 Image">
-                  </div>
-                  <div class="mySlides3">
-                      <img src="assets/s5.PNG" alt="Project 3 Image">
-                  </div>
-              </div>
-              
-              
-              
-              <div class="container">
-                  <h4><b>Chat Cord</b></h4>
-                  <p>Semester Project</p>
-                  
-              </div>
-          </div>
-          
-      </div>
-  </div>
-          
-
-    <footer>
-        <div class="top">
-            <div class="logo">
-                <a href="#">Hassan Shahzad</a>
-            </div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Youtube</a></li>
-                <li><a href="#">Projects</a></li>
+    
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container"></div>
+    
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Hassan Shahzad</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="social-links">
-              <a href="mailto:hassanatta2013@gmail.com"><i class='bx bxl-gmail'></i></a> 
-              <a href="#"><i class='bx bx-phone'></i></a>
-              <a href="https://github.com/hassan1222"><i class='bx bxl-github'></i></a>
-              <a href="https://www.linkedin.com/in/hassan-shahzad-0bb0472b7/"><i class='bx bxl-linkedin-square'></i></a>
-          </div>
-          
         </div>
-        <div class="separator"></div>
-        <div class="bottom">
-            <p>
-                Made By Hassan Shahzad
-            </p>
-            <div class="links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookies Setting</a>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Hassan Shahzad</h1>
+            <p class="subtitle">Full-Stack Developer</p>
+            <p class="description">Software Developer at Verso | Computer Science Graduate | MERN Stack | React.js, Node.js, Express | Docker & AWS Deployment | 3rd Place Final Year Project</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="downloadCV()">Download CV</button>
+                <a href="#projects" class="btn btn-secondary">View Projects</a>
             </div>
         </div>
-    </footer>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Frontend Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">CSS</span>
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">Material UI</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Backend Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express.js</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">REST APIs</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Database & Tools</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Nginx</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3> Framework/Technologies</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">PM2</span>
+                    <span class="skill-tag">AWS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>I'm Hassan Shahzad, a passionate software developer with a Bachelor's in Computer Science from COMSATS University, Islamabad. Currently working as a Software Developer at Verso, where I build scalable admin portals and web applications.</p>
+                <p>My expertise spans both frontend and backend development, with hands-on experience in modern technologies like React.js, Node.js, and cloud deployment. I thrive in fast-paced, team-oriented environments and am always eager to take on new challenges.</p>
+                <p>Fluent in Urdu, English, and French (intermediate), I enjoy collaborating with diverse teams and building innovative solutions that make a real impact.</p>
+            </div>
+            <div class="experience-list">
+                <div class="experience-card">
+                    <h4>Software Developer</h4>
+                    <p class="company">Verso</p>
+                    <p class="duration">Oct 2024 - May 2025</p>
+                    <p>Developed admin portals for Medivo (medical billing) and A2Z Appliances, plus a job portal. Gained expertise in deployment using PM2, Docker, and AWS.</p>
+                </div>
+                <div class="experience-card">
+                    <h4>Computer Science Graduate</h4>
+                    <p class="company">COMSATS University, Islamabad</p>
+                    <p class="duration">2020-2024</p>
+                    <p>Bachelor's degree with final year project "SmartDial" securing 3rd place in university competition.</p>
+                </div>
+                <div class="experience-card">
+                    <h4>Frontend Intern</h4>
+                    <p class="company">National Information Technology Board (NITB)</p>
+                    <p class="duration">July 2022</p>
+                    <p>2-week intensive internship focused on improving frontend development skills in HTML and CSS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                  <img src="assets/s3.PNG" alt="SmartDial"
+                       class="slideshow"
+                       data-images='["assets/s3.PNG","assets/s4.PNG","assets/sc-2.PNG"]'>
+                </div>
+                <div class="project-content">
+                  <h3>SmartDial</h3>
+                  <p>Final year project featuring voice separation, emotion detection...</p>
+                </div>
+              </div>
+              
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="assets/s5.PNG" alt="Chat App"
+                       class="slideshow"
+                       data-images='["assets/s5.PNG","assets/s5.PNG","assets/s5.PNG"]'>
+                </div>
+                <div class="project-content">
+                  <h3>Real-time Chat Application</h3>
+                  <p>Full-featured chatting application with Socket.io integration...</p>
+                </div>
+              </div>
+              
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="assets/s6.PNG" alt="E-commerce"
+                       class="slideshow"
+                       data-images='["assets/s6.PNG","assets/s7.PNG","assets/s8.PNG"]'>
+                </div>
+                <div class="project-content">
+                  <h3>E-commerce Platform</h3>
+                  <p>Comprehensive online store with product display...</p>
+                </div>
+              </div>
+              
+              <div class="project-card">
+                <div class="project-image">
+                  <img src="assets/n1.png" alt="Social Media"
+                       class="slideshow"
+                       data-images='["assets/n1.png","assets/n2.png","assets/n3.png"]'>
+                </div>
+                <div class="project-content">
+                  <h3>Social Media Platform</h3>
+                  <p>Full-stack social networking application with user authentication...</p>
+                </div>
+              </div>
+             </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-content">
+            <p>I'm always open to discussing new opportunities, innovative projects, and collaborations. Feel free to reach out!</p>
+            <div class="contact-links">
+                <a href="mailto:hassanatta2013@gmail.com" class="contact-link">
+                    <span>📧</span>
+                    <span>Email</span>
+                </a>
+                <a href="https://www.linkedin.com/in/hassan-shahzad-0bb0472b7/" class="contact-link" target="_blank">
+                    <span>💼</span>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://github.com/hassan1222" class="contact-link" target="_blank">
+                    <span>🔗</span>
+                    <span>GitHub</span>
+                </a>
+                <a href="tel:+923325528770" class="contact-link">
+                    <span>📱</span>
+                    <span>Phone</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 
