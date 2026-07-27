@@ -6,215 +6,658 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-97SSTRDTBQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-97SSTRDTBQ');
     </script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts: Playfair Display (Serif) & Plus Jakarta Sans (Sans-Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-    <title>Hassan</title>
+    <title>Hassan Shahzad | Software Developer</title>
 </head>
 
 <body>
     <!-- Loading Screen -->
     <div class="loading-screen" id="loadingScreen">
-        <div class="loader"></div>
+        <div class="loader-container">
+            <div class="editorial-loader"></div>
+            <div class="loader-text">HASSAN SHAHZAD</div>
+        </div>
     </div>
-    
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator" id="scrollIndicator"></div>
-    
-    <!-- 3D Canvas Container -->
-    <div id="canvas-container"></div>
-    
-    <!-- Navigation -->
+
+    <!-- Top Minimalist Navbar -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Hassan Shahzad</div>
+            <a href="#hero" class="logo">H.SHAHZAD</a>
             <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#hero" class="nav-link-item">Home</a></li>
+                <li><a href="#skills" class="nav-link-item">Skills</a></li>
+                <li><a href="#about" class="nav-link-item">About</a></li>
+                <li><a href="#live-sites" class="nav-link-item">Live Sites</a></li>
+                <li><a href="#projects" class="nav-link-item">Projects</a></li>
+                <li><a href="#contact" class="nav-link-item">Contact</a></li>
             </ul>
         </div>
     </nav>
-    
+
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section class="hero-section" id="hero">
         <div class="hero-content">
-            <h1>Hassan Shahzad</h1>
-            <p class="subtitle">Full-Stack Developer</p>
-            <p class="description">Software Developer at Verso | Computer Science Graduate | MERN Stack | React.js, Node.js, Express | Docker & AWS Deployment | 3rd Place Final Year Project</p>
+            <div class="hero-intro-text">SOFTWARE DEVELOPER & ENGINEER</div>
+            <h1 class="hero-title">
+                Building scalable web architectures with <span>refined interfaces</span>.
+            </h1>
+            <p class="hero-desc">
+                Full Stack Developer at Quantum Communications. I build scalable backend systems, enterprise web
+                applications, and full-stack solutions. Secured 3rd place in COMSATS University FYP competition.
+            </p>
             <div class="cta-buttons">
-                <button class="btn btn-primary" onclick="downloadCV()">Download CV</button>
-                <a href="#projects" class="btn btn-secondary">View Projects</a>
+                <button class="btn btn-primary" onclick="downloadCV()">Download Resume <i
+                        class='bx bx-right-arrow-alt'></i></button>
+                <a href="#projects" class="btn btn-secondary">Explore Projects</a>
             </div>
         </div>
     </section>
-    
+
     <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Technical Expertise</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Frontend Development</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">Tailwind CSS</span>
-                    <span class="skill-tag">Material UI</span>
-                </div>
+    <section id="skills" class="skills-section">
+        <div class="section-grid">
+            <div class="section-info">
+                <div class="label">EXPERTISE</div>
+                <h2 class="section-title">Technical Proficiencies.</h2>
+                <p class="section-desc">
+                    A comprehensive set of tools and technologies used to build responsive interfaces, reliable backend
+                    APIs, and efficient containerized deployments.
+                </p>
             </div>
-            <div class="skill-card">
-                <h3>Backend Development</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Express.js</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">REST APIs</span>
+            <div class="skills-cards-list">
+                <div class="skill-card-item">
+                    <span class="skill-num">01</span>
+                    <h3>Frontend Engineering</h3>
+                    <p class="skill-summary">HTML, CSS, React, Next.js, Bootstrap, Tailwind CSS, Material UI, Elementor
+                        (WordPress)</p>
                 </div>
-            </div>
-            <div class="skill-card">
-                <h3>Database & Tools</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">Git</span>
-                    <span class="skill-tag">Nginx</span>
+                <div class="skill-card-item">
+                    <span class="skill-num">02</span>
+                    <h3>Backend Architecture</h3>
+                    <p class="skill-summary">Node.js, Express.js, RESTful APIs, Microservices, RabbitMQ, PM2,
+                        Elasticsearch</p>
                 </div>
-            </div>
-            <div class="skill-card">
-                <h3> Framework/Technologies</h3>
-                <div class="skill-list">
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">PM2</span>
-                    <span class="skill-tag">AWS</span>
+                <div class="skill-card-item">
+                    <span class="skill-num">03</span>
+                    <h3>Databases & Infrastructure</h3>
+                    <p class="skill-summary">MongoDB, Supabase, MySQL, Git Version Control, Nginx Web Server</p>
+                </div>
+                <div class="skill-card-item">
+                    <span class="skill-num">04</span>
+                    <h3>DevOps & Cloud</h3>
+                    <p class="skill-summary">Docker Containerization, Kubernetes Orchestration, AWS Cloud Services</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- About Section -->
-    <section id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>I'm Hassan Shahzad, a passionate software developer with a Bachelor's in Computer Science from COMSATS University, Islamabad. Currently working as a Software Developer at Verso, where I build scalable admin portals and web applications.</p>
-                <p>My expertise spans both frontend and backend development, with hands-on experience in modern technologies like React.js, Node.js, and cloud deployment. I thrive in fast-paced, team-oriented environments and am always eager to take on new challenges.</p>
-                <p>Fluent in Urdu, English, and French (intermediate), I enjoy collaborating with diverse teams and building innovative solutions that make a real impact.</p>
+    <section id="about" class="about-section">
+        <div class="about-grid">
+            <div class="about-profile-info">
+                <div class="label">BIOGRAPHY</div>
+                <h2 class="section-title">A developer driven by craft and utility.</h2>
+                <div class="bio-text">
+                    <p>I'm Hassan Shahzad, a results-driven Software Engineer with experience building scalable backend
+                        systems, enterprise web applications, and full-stack solutions using Node.js, Express.js,
+                        React.js, MongoDB, MySQL, and AWS.</p>
+                    <p>My expertise includes designing and developing internal business applications like Inventory and
+                        Employee Management Systems, admin portals, job portals, and custom WordPress solutions. I focus
+                        on clean architecture, scalable system design, and high-performance applications.</p>
+                    <p>Fluent in Urdu, English, and French (intermediate), I enjoy collaborating with diverse teams and
+                        building innovative solutions that make a real impact.</p>
+                </div>
+                <div class="bio-certifications"
+                    style="margin-top: 25px; border-top: 1px solid #27272a; padding-top: 20px;">
+                    <div class="label" style="font-size: 11px; letter-spacing: 1.5px; margin-bottom: 10px;">
+                        CERTIFICATIONS</div>
+                    <div style="font-size: 14px; color: #a1a1aa; display: flex; align-items: center; gap: 8px;">
+                        <i class='bx bx-award' style='color: #38bdf8; font-size: 18px;'></i>
+                        <span><strong>MERN Stack Fundamentals</strong> &mdash; Great Learning Academy</span>
+                    </div>
+                </div>
             </div>
-            <div class="experience-list">
-                <div class="experience-card">
-                    <h4>Software Developer</h4>
-                    <p class="company">Verso</p>
-                    <p class="duration">Oct 2024 - May 2025</p>
-                    <p>Developed admin portals for Medivo (medical billing) and A2Z Appliances, plus a job portal. Gained expertise in deployment using PM2, Docker, and AWS.</p>
-                </div>
-                <div class="experience-card">
-                    <h4>Computer Science Graduate</h4>
-                    <p class="company">COMSATS University, Islamabad</p>
-                    <p class="duration">2020-2024</p>
-                    <p>Bachelor's degree with final year project "SmartDial" securing 3rd place in university competition.</p>
-                </div>
-                <div class="experience-card">
-                    <h4>Frontend Intern</h4>
-                    <p class="company">National Information Technology Board (NITB)</p>
-                    <p class="duration">July 2022</p>
-                    <p>2-week intensive internship focused on improving frontend development skills in HTML and CSS.</p>
+
+            <div class="about-experience">
+                <div class="timeline-container" id="timelineContainer">
+                    <!-- Progress Line -->
+                    <div class="timeline-line"></div>
+                    <div class="timeline-progress" id="timelineProgress"></div>
+
+                    <!-- Experience Card 1 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Sep 2025 - Present</span>
+                            <h3>Full Stack Developer</h3>
+                            <span class="company">Quantum Communications</span>
+                            <p>Designed and developed internal business applications, including an Inventory Management
+                                System and Employee Management System, to streamline company operations and improve
+                                workflow efficiency. Additionally, built and maintained dynamic WordPress websites for
+                                both internal and client projects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Card 2 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">Oct 2024 - July 2025</span>
+                            <h3>Backend Developer</h3>
+                            <span class="company">Verso</span>
+                            <p>Developed and maintained admin portals for Medivo (medical billing) and A2Z Appliances
+                                (blogs), ensuring intuitive interfaces and efficient functionality. Designed and
+                                implemented a job portal for Verso, enhancing user engagement and streamlining job
+                                searches. Gained hands-on experience in deployment processes using PM2 and Docker on
+                                AWS, ensuring scalable and reliable application hosting.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Card 3 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2020 - 2024</span>
+                            <h3>Bachelor of Computer Science</h3>
+                            <span class="company">COMSATS University, Islamabad</span>
+                            <p>Final year project "SmartDial" securing 3rd place in university competition.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Card 4 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">July 2022</span>
+                            <h3>Frontend Intern</h3>
+                            <span class="company">National Information Technology Board (NITB)</span>
+                            <p>2-week intensive internship focused on improving frontend development skills in HTML and
+                                CSS.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Card 5 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2017 - 2019</span>
+                            <h3>A’levels</h3>
+                            <span class="company">Beaconhouse Margalla Campus</span>
+                            <p>Completed Advanced Level secondary education.</p>
+                        </div>
+                    </div>
+
+                    <!-- Experience Card 6 -->
+                    <div class="timeline-node">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2014 - 2017</span>
+                            <h3>O’levels</h3>
+                            <span class="company">Beaconhouse Margalla Campus</span>
+                            <p>Completed Ordinary Level secondary education.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                  <img src="assets/s3.PNG" alt="SmartDial"
-                       class="slideshow"
-                       data-images='["assets/s3.PNG","assets/s4.PNG","assets/sc-2.PNG"]'>
-                </div>
-                <div class="project-content">
-                  <h3>SmartDial</h3>
-                  <p>Final year project featuring voice separation, emotion detection...</p>
-                </div>
-              </div>
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="assets/s5.PNG" alt="Chat App"
-                       class="slideshow"
-                       data-images='["assets/s5.PNG","assets/s5.PNG","assets/s5.PNG"]'>
-                </div>
-                <div class="project-content">
-                  <h3>Real-time Chat Application</h3>
-                  <p>Full-featured chatting application with Socket.io integration...</p>
-                </div>
-              </div>
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="assets/s6.PNG" alt="E-commerce"
-                       class="slideshow"
-                       data-images='["assets/s6.PNG","assets/s7.PNG","assets/s8.PNG"]'>
-                </div>
-                <div class="project-content">
-                  <h3>E-commerce Platform</h3>
-                  <p>Comprehensive online store with product display...</p>
-                </div>
-              </div>
-              
-              <div class="project-card">
-                <div class="project-image">
-                  <img src="assets/n1.png" alt="Social Media"
-                       class="slideshow"
-                       data-images='["assets/n1.png","assets/n2.png","assets/n3.png"]'>
-                </div>
-                <div class="project-content">
-                  <h3>Social Media Platform</h3>
-                  <p>Full-stack social networking application with user authentication...</p>
-                </div>
-              </div>
-             </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Let's Connect</h2>
-        <div class="contact-content">
-            <p>I'm always open to discussing new opportunities, innovative projects, and collaborations. Feel free to reach out!</p>
-            <div class="contact-links">
-                <a href="mailto:hassanatta2013@gmail.com" class="contact-link">
-                    <span>📧</span>
-                    <span>Email</span>
+
+    <!-- Live Websites Section -->
+    <section id="live-sites" class="live-sites-section">
+        <div class="live-sites-sticky-wrapper">
+            <div class="live-sites-header">
+                <div class="label">LIVE WEBSITES</div>
+                <h2 class="section-title">Production Deployments.</h2>
+                <p class="section-desc">
+                    Explore live platforms built, optimized, and deployed in production environments, featuring
+                    responsive design and high performance.
+                </p>
+            </div>
+
+            <div class="live-sites-slider-container">
+                <!-- Site 1 -->
+                <a href="https://quantumronics.com/" class="live-site-card" target="_blank">
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <img src="assets/quantumronics.png" alt="QuantumRonics Preview">
+                    </div>
+                    <div class="live-card-info">
+                        <div class="card-num-line">
+                            <span class="card-num">01</span>
+                            <span class="live-site-link">quantumronics.com</span>
+                        </div>
+                        <h3>QuantumRonics <i class='bx bx-right-top-arrow-circle'></i></h3>
+                        <p>Quantum-driven cybersecurity solutions using post-quantum cryptography to secure future-ready
+                            digital infrastructure.</p>
+                    </div>
                 </a>
-                <a href="https://www.linkedin.com/in/hassan-shahzad-0bb0472b7/" class="contact-link" target="_blank">
-                    <span>💼</span>
-                    <span>LinkedIn</span>
+
+                <!-- Site 2 -->
+                <a href="https://quantumvalley.com.pk/" class="live-site-card" target="_blank">
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <img src="assets/quantumvalley.png" alt="Quantum Valley Preview">
+                    </div>
+                    <div class="live-card-info">
+                        <div class="card-num-line">
+                            <span class="card-num">02</span>
+                            <span class="live-site-link">quantumvalley.com.pk</span>
+                        </div>
+                        <h3>Quantum Valley <i class='bx bx-right-top-arrow-circle'></i></h3>
+                        <p>An ambitious national initiative designed to pioneer advanced scientific research, industrial
+                            growth, and technological innovation.</p>
+                    </div>
                 </a>
-                <a href="https://github.com/hassan1222" class="contact-link" target="_blank">
-                    <span>🔗</span>
-                    <span>GitHub</span>
+
+                <!-- Site 3 -->
+                <a href="https://msshahbaz.com.pk/" class="live-site-card" target="_blank">
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <img src="assets/msshahbaz.png" alt="M.S. Shahbaz Enterprises Preview">
+                    </div>
+                    <div class="live-card-info">
+                        <div class="card-num-line">
+                            <span class="card-num">03</span>
+                            <span class="live-site-link">msshahbaz.com.pk</span>
+                        </div>
+                        <h3>M.S. Shahbaz Enterprises <i class='bx bx-right-top-arrow-circle'></i></h3>
+                        <p>A modern trading and supply solutions portal, custom-designed to optimize inventory display
+                            and coordinate client inquiries.</p>
+                    </div>
                 </a>
-                <a href="tel:+923325528770" class="contact-link">
-                    <span>📱</span>
-                    <span>Phone</span>
+
+                <!-- Site 4 -->
+                <a href="https://freemencorporation.com.pk/" class="live-site-card" target="_blank">
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <img src="assets/freemencorporation.png" alt="Freemen Corporation Preview">
+                    </div>
+                    <div class="live-card-info">
+                        <div class="card-num-line">
+                            <span class="card-num">04</span>
+                            <span class="live-site-link">freemencorporation.com.pk</span>
+                        </div>
+                        <h3>Freemen Corporation <i class='bx bx-right-top-arrow-circle'></i></h3>
+                        <p>A professional consultancy service based in Islamabad specializing in stock trading guidance,
+                            shares acquisition, and corporate business consultancy.</p>
+                    </div>
+                </a>
+
+                <!-- Site 5 -->
+                <a href="https://sapphirelands.com.pk/" class="live-site-card" target="_blank">
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <img src="assets/sapphirelands.png" alt="Sapphire Lands Preview">
+                    </div>
+                    <div class="live-card-info">
+                        <div class="card-num-line">
+                            <span class="card-num">05</span>
+                            <span class="live-site-link">sapphirelands.com.pk</span>
+                        </div>
+                        <h3>Sapphire Lands <i class='bx bx-right-top-arrow-circle'></i></h3>
+                        <p>A premier real estate and property consultancy firm based in Islamabad, providing transparent
+                            property sales, purchase, and project marketing services.</p>
+                    </div>
+                </a>
+
+                <!-- Site 6 -->
+                <a href="https://bluefissiontech.com.pk/" class="live-site-card" target="_blank">
+                    <div class="browser-mockup">
+                        <div class="browser-header">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <img src="assets/bluefissiontech.png" alt="Blue Fission Technologies Preview">
+                    </div>
+                    <div class="live-card-info">
+                        <div class="card-num-line">
+                            <span class="card-num">06</span>
+                            <span class="live-site-link">bluefissiontech.com.pk</span>
+                        </div>
+                        <h3>Blue Fission Technologies <i class='bx bx-right-top-arrow-circle'></i></h3>
+                        <p>A trading and procurement company offering supply chain solutions, general goods trading,
+                            import/export facilitation, and sourcing services.</p>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Three.js Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Projects Section (Split Scroll Layout) -->
+    <section id="projects" class="projects-section">
+        <div class="projects-header" style="margin-bottom: 80px;">
+            <div class="label">PROJECTS</div>
+            <h2 class="section-title projects-title">Selected Works.</h2>
+            <p class="section-desc projects-desc" style="max-width: 600px;">
+                A collection of engineering projects, highlighting microservices architecture, real-time communications, and intelligent analytics.
+            </p>
+        </div>
+        <div class="projects-split-container">
+            <!-- Left Side: Sticky Images -->
+            <div class="projects-image-sticky-side">
+                <div class="image-container-wrapper">
+                    <!-- Image 1: ConvertnEdit -->
+                    <div class="project-image-view active" data-project-image="0">
+                        <a href="https://convertnedit.com/" target="_blank" class="image-frame-link">
+                            <div class="image-frame">
+                                <img src="assets/convertnedit.png" alt="ConvertnEdit" class="slideshow"
+                                    data-images='["assets/convertnedit.png"]'>
+                                <div class="slideshow-indicator">
+                                    <span class="indicator-dot active"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Image 2: SmartDial -->
+                    <div class="project-image-view" data-project-image="1">
+                        <div class="image-frame">
+                            <img src="assets/s3.PNG" alt="SmartDial" class="slideshow"
+                                data-images='["assets/s3.PNG","assets/s4.PNG","assets/sc-2.PNG"]'>
+                            <div class="slideshow-indicator">
+                                <span class="indicator-dot active"></span>
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image (Commented Out)
+                    <div class="project-image-view" data-project-image="chat-app">
+                        <div class="image-frame">
+                            <img src="assets/s5.PNG" alt="Chat App" class="slideshow"
+                                data-images='["assets/s5.PNG","assets/s5.PNG","assets/s5.PNG"]'>
+                            <div class="slideshow-indicator">
+                                <span class="indicator-dot active"></span>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <!-- Image 3: Enterprise Distributed Order Pipeline -->
+                    <div class="project-image-view" data-project-image="2">
+                        <div class="image-frame">
+                            <img src="assets/s6.PNG" alt="Enterprise Distributed Order Pipeline" class="slideshow"
+                                data-images='["assets/s6.PNG","assets/s7.PNG","assets/s8.PNG"]'>
+                            <div class="slideshow-indicator">
+                                <span class="indicator-dot active"></span>
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Image (Commented Out)
+                    <div class="project-image-view" data-project-image="inventory-sys">
+                        <div class="image-frame">
+                            <img src="assets/n1.png" alt="Inventory & Employee Management Systems" class="slideshow"
+                                data-images='["assets/n1.png","assets/n2.png","assets/n3.png"]'>
+                            <div class="slideshow-indicator">
+                                <span class="indicator-dot active"></span>
+                                <span class="indicator-dot"></span>
+                                <span class="indicator-dot"></span>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </div>
+
+            <!-- Right Side: Scrollable Details -->
+            <div class="projects-text-scroll-side">
+                <!-- Project 1: ConvertnEdit -->
+                <div class="project-text-block active" data-project-index="0">
+                    <span class="project-num-label">01</span>
+                    <h3><a href="https://convertnedit.com/" target="_blank" class="project-title-link">ConvertnEdit <i class='bx bx-right-top-arrow-circle'></i></a></h3>
+
+                    <!-- Mobile Image Frame (Visible only on mobile viewports) -->
+                    <div class="mobile-project-image">
+                        <a href="https://convertnedit.com/" target="_blank">
+                            <img src="assets/convertnedit.png" alt="ConvertnEdit">
+                        </a>
+                    </div>
+
+                    <p class="project-desc-text">A high-performance media conversion & editing suite built for speed and privacy. Features browser-based audio transcoding, wave editing, AI background & watermark removal, image compression, and PDF tools.</p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">WebAssembly</span>
+                        <span class="tech-tag">AI Models</span>
+                    </div>
+                    <a href="https://convertnedit.com/" target="_blank" class="project-live-btn"><i class='bx bx-globe'></i> Visit Live Site <i class='bx bx-right-top-arrow-circle'></i></a>
+                </div>
+
+                <!-- Project 2: SmartDial -->
+                <div class="project-text-block" data-project-index="1">
+                    <span class="project-num-label">02</span>
+                    <h3>SmartDial</h3>
+
+                    <!-- Mobile Image Frame -->
+                    <div class="mobile-project-image">
+                        <img src="assets/s3.PNG" alt="SmartDial">
+                    </div>
+
+                    <p class="project-desc-text">Implemented voice separation for employee and client, emotion
+                        detection, hate speech detection, and sarcasm detection. Features audio training for employees
+                        in low-pressure environments. Awarded 3rd place in a university final-year project competition.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">PyTorch</span>
+                    </div>
+                </div>
+
+                <!-- Project (Commented Out)
+                <div class="project-text-block" data-project-index="chat-app">
+                    <span class="project-num-label">02</span>
+                    <h3>Real-time Chat App</h3>
+
+                    <div class="mobile-project-image">
+                        <img src="assets/s5.PNG" alt="Chat App">
+                    </div>
+
+                    <p class="project-desc-text">Developed a real-time chatting application using Socket.io. Features
+                        include sending PDF files, Word documents, images, videos, and video calling using WebRTC.</p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Socket.io</span>
+                        <span class="tech-tag">WebRTC</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+                -->
+
+                <!-- Project 3: Enterprise Distributed Order Pipeline -->
+                <div class="project-text-block" data-project-index="2">
+                    <span class="project-num-label">03</span>
+                    <h3>Enterprise Distributed Order Pipeline</h3>
+
+                    <!-- Mobile Image Frame -->
+                    <div class="mobile-project-image">
+                        <img src="assets/s6.PNG" alt="Enterprise Distributed Order Pipeline">
+                    </div>
+
+                    <p class="project-desc-text">Built a microservices-based Order Management Platform with an API
+                        Gateway, Authentication, Inventory, Order, Payment, and Notification services, leveraging
+                        RabbitMQ for asynchronous communication, Saga Pattern for transaction management, Optimistic
+                        Locking, and Elasticsearch for fast fuzzy product search.</p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">Elasticsearch</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Project (Commented Out)
+                <div class="project-text-block" data-project-index="inventory-sys">
+                    <span class="project-num-label">04</span>
+                    <h3>Inventory & Employee Management Systems</h3>
+
+                    <div class="mobile-project-image">
+                        <img src="assets/n1.png" alt="Inventory & Employee Management Systems">
+                    </div>
+
+                    <p class="project-desc-text">Designed and developed internal business applications to streamline
+                        operations, optimize workflow efficiency, and manage company resources. Integrated secure
+                        role-based access control and analytics dashboards.</p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="label">GET IN TOUCH</div>
+            <h2 class="contact-headline">Let's create something together.</h2>
+
+            <div class="contact-grid">
+                <div class="contact-main">
+                    <a href="mailto:hassanatta2013@gmail.com" class="big-email">hassanatta2013@gmail.com <i
+                            class='bx bx-right-top-arrow-circle'></i></a>
+                    <p class="contact-intro-text">
+                        If you're looking for a dedicated developer to build robust admin portals, design fluid
+                        interfaces, or deploy cloud infrastructures, feel free to drop an email.
+                    </p>
+                </div>
+
+                <div class="contact-side">
+                    <div class="social-links-list">
+                        <a href="https://www.linkedin.com/in/hassan-shahzad-0bb0472b7/" class="social-item"
+                            target="_blank">
+                            <span>LINKEDIN</span>
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                        <a href="https://github.com/hassan1222" class="social-item" target="_blank">
+                            <span>GITHUB</span>
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                        <a href="tel:+923325528770" class="social-item">
+                            <span>PHONE</span>
+                            <i class='bx bx-phone'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Floating Character Person -->
+    <div class="fixed-character-container" id="characterContainer">
+        <div class="character-float">
+            <svg class="avatar-svg" id="character-avatar" width="120" height="140" viewBox="0 0 120 140">
+                <!-- Neck -->
+                <rect class="avatar-neck" x="52" y="90" width="16" height="20" rx="4" fill="#fdd1b6"
+                    stroke="rgba(0,0,0,0.05)" stroke-width="1" />
+
+                <!-- Body (Torso wearing dark t-shirt) -->
+                <path class="avatar-body" d="M25 110 C 25 110, 30 140, 60 140 C 90 140, 95 110, 95 110 Z" fill="#18181b"
+                    stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+                <path d="M48 110 A 12 12 0 0 0 72 110 Z" fill="#fdd1b6" /> <!-- neck collar cut -->
+
+                <!-- Head Group (moves/tilts with cursor) -->
+                <g class="avatar-head" style="transition: transform 0.1s ease-out; transform-origin: 60px 70px;">
+                    <!-- Ears -->
+                    <circle cx="26" cy="62" r="6" fill="#fdd1b6" />
+                    <circle cx="94" cy="62" r="6" fill="#fdd1b6" />
+
+                    <!-- Face Shape -->
+                    <rect x="28" y="32" width="64" height="60" rx="22" fill="#fdd1b6" />
+
+                    <!-- Cheeks (subtle blush for a friendly professional look) -->
+                    <circle cx="38" cy="72" r="4" fill="#fca5a5" opacity="0.4" />
+                    <circle cx="82" cy="72" r="4" fill="#fca5a5" opacity="0.4" />
+
+                    <!-- Eyebrows -->
+                    <path d="M38 45 Q 46 41 52 46" fill="none" stroke="#1f2937" stroke-width="2"
+                        stroke-linecap="round" />
+                    <path d="M68 46 Q 74 41 82 45" fill="none" stroke="#1f2937" stroke-width="2"
+                        stroke-linecap="round" />
+
+                    <!-- Eye Whites -->
+                    <ellipse cx="46" cy="54" rx="7" ry="5" fill="#ffffff" />
+                    <ellipse cx="74" cy="54" rx="7" ry="5" fill="#ffffff" />
+
+                    <!-- Eye Pupils (JS moves these relative to cursor) -->
+                    <circle class="eye-pupil" cx="46" cy="54" r="3" fill="#1f2937"
+                        style="transition: transform 0.1s ease-out;" />
+                    <circle class="eye-pupil" cx="74" cy="54" r="3" fill="#1f2937"
+                        style="transition: transform 0.1s ease-out;" />
+
+                    <!-- Glasses (Rimmed frames) -->
+                    <rect x="34" y="44" width="24" height="20" rx="6" fill="none" stroke="#111827" stroke-width="2.5" />
+                    <rect x="62" y="44" width="24" height="20" rx="6" fill="none" stroke="#111827" stroke-width="2.5" />
+                    <path d="M58 52 C 59 50, 61 50, 62 52" fill="none" stroke="#111827" stroke-width="2.5" />
+
+                    <!-- Smile -->
+                    <path d="M52 74 Q 60 80 68 74" fill="none" stroke="#1f2937" stroke-width="2"
+                        stroke-linecap="round" />
+
+                    <!-- Side Hair Pieces -->
+                    <path d="M28 40 C 28 40, 24 48, 24 54 C 28 54, 28 46, 28 40 Z" fill="#1f2937" />
+                    <path d="M92 40 C 92 40, 96 48, 96 54 C 92 54, 92 46, 92 40 Z" fill="#1f2937" />
+
+                    <!-- Top Hairstyle -->
+                    <path
+                        d="M28 40 C 26 24, 48 16, 62 20 C 78 12, 92 20, 92 40 C 94 48, 88 52, 88 44 C 82 28, 54 26, 42 36 C 36 41, 30 48, 28 40 Z"
+                        fill="#1f2937" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="lenis.min.js"></script>
+
+    <!-- App Script -->
     <script src="script.js"></script>
 </body>
 
