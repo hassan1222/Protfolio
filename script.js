@@ -22,16 +22,79 @@ function initScrollSpy() {
             }
         });
         
-        // Add borders to nav on scroll
+        // Toggle scrolled class on navbar on scroll
         const navbar = document.getElementById('navbar');
         if (navbar) {
             if (window.scrollY > 40) {
-                navbar.style.padding = '18px 60px';
-                navbar.style.background = 'rgba(9, 9, 11, 0.95)';
+                navbar.classList.add('scrolled');
             } else {
-                navbar.style.padding = '24px 60px';
-                navbar.style.background = 'rgba(9, 9, 11, 0.8)';
+                navbar.classList.remove('scrolled');
             }
+        }
+    });
+}
+
+/* Mobile Navigation Menu Toggle Handler */
+function initMobileMenu() {
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    const navBackdrop = document.getElementById('navBackdrop');
+    
+    if (!mobileToggle || !navLinks) return;
+    
+    function openMenu() {
+        navLinks.classList.add('active');
+        if (navBackdrop) navBackdrop.classList.add('active');
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+            icon.className = 'bx bx-x';
+        }
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        if (navBackdrop) navBackdrop.classList.remove('active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+            icon.className = 'bx bx-menu';
+        }
+        document.body.style.overflow = '';
+    }
+    
+    function toggleMenu() {
+        if (navLinks.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+    
+    mobileToggle.addEventListener('click', toggleMenu);
+    
+    if (navBackdrop) {
+        navBackdrop.addEventListener('click', closeMenu);
+    }
+    
+    // Close menu when clicking nav links
+    const linkItems = navLinks.querySelectorAll('a');
+    linkItems.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+    
+    // Close on Escape key press
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+    
+    // Close menu when window resizes beyond mobile breakpoint
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 900 && navLinks.classList.contains('active')) {
+            closeMenu();
         }
     });
 }
@@ -297,7 +360,7 @@ function hideLoadingScreen() {
     }
 }
 
-/* Horizontal Scroll on Vertical Page Scroll for Live Sites */
+/* Horizontal Scroll on Vertical Page Scroll for Live Sites (Universal Desktop + Mobile/Tablet) */
 function initHorizontalScroll() {
     const section = document.getElementById('live-sites');
     const wrapper = document.querySelector('.live-sites-sticky-wrapper');
@@ -309,14 +372,6 @@ function initHorizontalScroll() {
     let maxScroll = 0;
     
     function recalculateMetrics() {
-        const isDesktop = window.innerWidth > 1024;
-        
-        if (!isDesktop) {
-            initialTranslate = 0;
-            maxScroll = 0;
-            return;
-        }
-        
         // Temporarily clear transform to measure pure layout coordinates
         const oldTransform = track.style.transform;
         track.style.transform = '';
@@ -342,23 +397,17 @@ function initHorizontalScroll() {
     }
     
     function updateScroll() {
-        const isDesktop = window.innerWidth > 1024;
+        const rect = section.getBoundingClientRect();
+        const sectionHeight = rect.height;
+        const viewportHeight = window.innerHeight;
         
-        if (!isDesktop) {
-            track.style.transform = '';
-        } else {
-            const rect = section.getBoundingClientRect();
-            const sectionHeight = rect.height;
-            const viewportHeight = window.innerHeight;
+        const totalScrollableDistance = sectionHeight - viewportHeight;
+        if (totalScrollableDistance > 0) {
+            let progress = -rect.top / totalScrollableDistance;
+            progress = Math.max(0, Math.min(1, progress));
             
-            const totalScrollableDistance = sectionHeight - viewportHeight;
-            if (totalScrollableDistance > 0) {
-                let progress = -rect.top / totalScrollableDistance;
-                progress = Math.max(0, Math.min(1, progress));
-                
-                const translateX = initialTranslate - progress * maxScroll;
-                track.style.transform = `translateX(${translateX}px)`;
-            }
+            const translateX = initialTranslate - progress * maxScroll;
+            track.style.transform = `translateX(${translateX}px)`;
         }
         
         // Find the card closest to the viewport center and toggle active-center class
@@ -394,26 +443,38 @@ function initHorizontalScroll() {
     
     window.addEventListener('scroll', updateScroll);
     window.addEventListener('resize', setupMetrics);
-    track.addEventListener('scroll', updateScroll);
     setupMetrics();
 }
 
-/* Interactive Floating Character Drone */
+/* Interactive Floating Character Drone (Desktop, Tablet & Mobile) */
 function initCharacterInteraction() {
     const container = document.getElementById('characterContainer');
     const avatar = document.getElementById('character-avatar');
     
     if (!container || !avatar) return;
     
-    // Define character coordinates mapping for each section
-    const coordinates = {
-        'hero': { top: '40vh', left: '76vw', scale: 1 },
-        'skills': { top: '55vh', left: '16vw', scale: 0.9 },
-        'about': { top: '40vh', left: '78vw', scale: 1 },
-        'live-sites': { top: '30vh', left: '78vw', scale: 0.9 },
-        'projects': { top: '50vh', left: '78vw', scale: 0.95 },
-        'contact': { top: '55vh', left: '78vw', scale: 1 }
-    };
+    function getCoordinates(sectionId) {
+        const isMobile = window.innerWidth <= 900;
+        const desktopCoords = {
+            'hero': { top: '40vh', left: '76vw', scale: 1 },
+            'skills': { top: '55vh', left: '16vw', scale: 0.9 },
+            'about': { top: '40vh', left: '78vw', scale: 1 },
+            'live-sites': { top: '22vh', left: '80vw', scale: 0.8 },
+            'projects': { top: '50vh', left: '78vw', scale: 0.95 },
+            'contact': { top: '55vh', left: '78vw', scale: 1 }
+        };
+        
+        const mobileCoords = {
+            'hero': { top: '38vh', left: '84vw', scale: 0.65 },
+            'skills': { top: '45vh', left: '84vw', scale: 0.55 },
+            'about': { top: '38vh', left: '84vw', scale: 0.6 },
+            'live-sites': { top: '22vh', left: '84vw', scale: 0.55 },
+            'projects': { top: '38vh', left: '84vw', scale: 0.55 },
+            'contact': { top: '48vh', left: '84vw', scale: 0.6 }
+        };
+
+        return isMobile ? (mobileCoords[sectionId] || mobileCoords['hero']) : (desktopCoords[sectionId] || desktopCoords['hero']);
+    }
     
     // 1. Move character based on active section
     const observerOptions = {
@@ -426,7 +487,7 @@ function initCharacterInteraction() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const sectionId = entry.target.getAttribute('id');
-                const targetPos = coordinates[sectionId];
+                const targetPos = getCoordinates(sectionId);
                 
                 if (targetPos) {
                     container.style.top = targetPos.top;
@@ -439,23 +500,20 @@ function initCharacterInteraction() {
     
     document.querySelectorAll('section').forEach(section => observer.observe(section));
     
-    // 2. Cursor tracking (Head and Eyes movement)
-    window.addEventListener('mousemove', (e) => {
-        if (window.innerWidth <= 1024) return;
-        
+    // 2. Cursor & Touch tracking (Head and Eyes movement)
+    function trackTarget(clientX, clientY) {
         const rect = avatar.getBoundingClientRect();
         const charX = rect.left + rect.width / 2;
         const charY = rect.top + rect.height / 2;
         
-        const deltaX = e.clientX - charX;
-        const deltaY = e.clientY - charY;
+        const deltaX = clientX - charX;
+        const deltaY = clientY - charY;
         const distance = Math.hypot(deltaX, deltaY) || 1;
         
         const maxPupilMove = 6;
         const maxHeadMove = 8;
         const maxHeadRotate = 12;
         
-        // Dynamic influence factor based on cursor closeness
         const factor = Math.min(distance / 500, 1);
         const angle = Math.atan2(deltaY, deltaX);
         
@@ -476,13 +534,21 @@ function initCharacterInteraction() {
         if (head) {
             head.style.transform = `translate(${headX}px, ${headY}px) rotate(${headRotate}deg)`;
         }
-    });
+    }
+
+    window.addEventListener('mousemove', (e) => trackTarget(e.clientX, e.clientY));
+    window.addEventListener('touchmove', (e) => {
+        if (e.touches && e.touches[0]) {
+            trackTarget(e.touches[0].clientX, e.touches[0].clientY);
+        }
+    }, { passive: true });
 }
 
 // Initializer
 document.addEventListener('DOMContentLoaded', () => {
     initLenis();
     initScrollSpy();
+    initMobileMenu();
     initScrollIndicator();
     initSplitScreenProgress();
     initTimelineProgress();

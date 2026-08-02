@@ -37,7 +37,10 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#hero" class="logo">H.SHAHZAD</a>
-            <ul class="nav-links">
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class='bx bx-menu'></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#hero" class="nav-link-item">Home</a></li>
                 <li><a href="#skills" class="nav-link-item">Skills</a></li>
                 <li><a href="#about" class="nav-link-item">About</a></li>
@@ -47,6 +50,7 @@
             </ul>
         </div>
     </nav>
+    <div class="nav-backdrop" id="navBackdrop"></div>
 
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
